@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const port = 8080
 
 // connection for mongoDB
-var mongoDB = 'mongodb://127.0.0.1/vocab';
+var mongoDB = 'mongodb://localhost:27017/vocab';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB failed to connect to vocab:'));
